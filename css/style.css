@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root{
+    --rose-color:#f25454;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Global */
+    
+    .main-title .head-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-size: 4rem;
+        
+    }
+    .head-title h3{
+        font-size: 2rem;
+        padding-bottom: 5px;
+    }
+    .head-title h2{
+        font-size: 4rem;
+        position: absolute;
+        bottom: 0;
+        color: rgba(0, 0, 0, 0.150);
+    }
+    .head-title h3::after{
+        content: '';
+        width: 4%;
+        height: 1px;
+        background-color: black;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%);
+        transition: all 0.5s;
+    }
+    .head-title:hover h3::after{
+        width: 6%;
+    }
+/* END Global */
+
+
+
+
+
+body .setting{
+    position: fixed;
+    top: 20%;
+    left: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #1f2528;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 99;
+
+}
+body .setting:hover{
+    background-color: #263036;
+}
+
+
+
+/* Navbar */
+.navbar-nav .nav-link{
+    color: #fff;
+}
+
+.navbar-nav .nav-link.active{
+    color: #f25454;
+    transition: all .1s;
+}
+.navbar-nav .nav-link:hover{
+    color: #f25454;
+}
+
+
+/* END Navbar */
+
+
+/* Home Section */
+#home{
+   
+    height: 100vh;
+    position: relative;
+}
+
+#home .left{
+    color: white;
+    position: absolute;
+    font-size: 25px;
+    top: 45%;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;    
+    border: 1px solid white;
+    border-left: 0px;
+    border-bottom: 0;
+    border-radius: 0 5px 0 0;
+    cursor: pointer;
+    
+
+}
+
+#home .carousel-control-next{
+    color: white;
+    position: absolute;
+    font-size: 25px;
+    top: 52%;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;    
+    border: 1px solid white;
+    border-left: 0px;
+    border-radius: 0 0 5px 0;
+    cursor: pointer;
+    
+}
+#home .carousel-control-next span{
+    position: relative;
+}
+
+
+
+
+.scroll{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 25px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.scroll::after{
+    position: absolute;
+
+    left: 50%;
+    transform: translate(-50%);
+    content:'';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: ani 1.5s  infinite ;
+}
+
+@keyframes ani{
+    0%{
+     top: 10%;
+    }
+    25%{
+        top: 25%;
+    }
+    50%{
+        top: 50%;
+    }
+    75%{
+        top: 75%;
+        /* background-color: transparent; */
+    }
+    100%{
+        background-color: transparent;
+        top: 10%;
+    }
+}
+
+/* END HOME SECTION */
+
+
+/* ABOUT SECTION */
+#about .progress{
+    height: 4px;
+
+}
+#about .skills-progress{
+    padding-bottom: 15px;
+}
+#about .progress-bar{
+    background-color: #f25454;
+}
+
+
+
+/* END ABOUT SECTION */
+
+/* START TEAM SECTION */
+#team .image{
+    position: relative;
+}
+#team .layer .icons{
+    color: transparent;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all .5s;
+}
+.member h3{
+    transition: all 0.5s;
+}
+#team .member .image img{
+    transition: all .5s ;
+}
+#team .member:hover img{
+
+    transform: scale(1.10);
+}
+#team .member:hover .icons{
+    color: #fff;
+    background-color: #f25454b9;
+}
+#team .member:hover h3{
+    color: var(--rose-color);
+    /* background-color: #f25454b9; */
+}
+
+
+#team .btn-contact .btn{
+    padding: 12px 25px;
+    font-weight: 700;
+    color: white;
+    background-color: #f25454;
+}
+#team .btn-contact .btn:hover{
+    background-color:#f25454dd ;
+}
+
+/* END TEAM SRCTION */
+
+
+/* START SERVICES SECTION */
+
+
+#services .icon{
+    font-size: 1.5rem;
+    color: #f25454;
+}
+#services .service-single h3{
+    transition: all .2s;
+}
+
+#services .service-single:hover h3{
+    color: #f25454;
+}
+/* END SERVICES SECTION */
+
+/* START CLIENT SECTION */
+#client .carousel-indicators{
+    margin-left: 0;
+    margin-right: 0;
+}
+#client .carousel-indicators [data-bs-target]{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    text-indent: 0;
+    
+}
+/* END CLIENT SECTION */
+
+
+/* START CONTACT SECTION */
+#contact .contact-details .icon{
+    color: #f25454;
+}
+#contact .contact-text{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+}
+#contact .contact-box h4{
+    transition: all 0.5s;
+}
+#contact .contact-box:hover h4{
+    color: #f25454;
+}
+
+#contact form .btn{
+    background-color: #f25454;
+    color: #fff;
+    padding: 10px 20px;
+}
+#contact form .btn:hover{
+    background-color: #f25454be;
+}
+
+/* WND CONTACT SECTION */
+
+/* START FOOTER */
+#footer{
+    
+    background: url(../images/dotted-map.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    background-color: #222;
+    position: relative;
+}
+
+#footer .up-angle a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: absolute;
+    top: -5%;
+    bottom: 95%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    background-color: #f25454a6;
+    transition: all 0.5s;
+}
+#footer .up-angle a:hover{
+    background-color: #f25454;
+}
+
+#footer .foot-title{
+    color: white;
+    padding-bottom: 20px;
+}
+
+
+#footer .foot-text li a{
+    color: rgba(255, 255, 255, 0.384);
+    padding-bottom: 3px;
+    transition: all 0.5s;
+}
+#footer .foot-text li:hover a{
+    color: #f25454;
+}
+
+#footer .foot-text .tags .tag{
+    /* background-color: #f25454; */
+    margin-right: 10px;
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.384);
+    border: 1px solid rgba(255, 255, 255, 0.562);
+    border-radius: 3px;
+    transition: all .5s;
+}
+#footer .footer-foot{
+    background-color: #1a1a1a;
+}
+#footer .footer-foot span{
+    color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#footer .footer-foot span:hover i{
+    color: #f25454;
+}
+
+#footer .foot-text .tags .tag:hover{
+    border-color: #f25454;
+    color: #f25454;
+}
+
+#footer .footer-foot .cy p{
+    color: gray;
+}
+#footer .footer-foot .cy a{
+    color: white;
+    transition: all 0.5s;
+}
+#footer .footer-foot .cy a:hover{
+    color: #f25454;
+}
+/* END FOOTER */
