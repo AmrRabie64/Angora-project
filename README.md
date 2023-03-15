@@ -1,2 +1,2 @@
 # Angora-project
- project using "html-css-bootstrap"
+ project using "html-css-bootstrap" (responsive)
